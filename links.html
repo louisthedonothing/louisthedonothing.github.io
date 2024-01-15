@@ -14,13 +14,14 @@
         THIS PAGE IS A WORK IN PROGRESS :3
     </marquee>
 
-    <audio id="myAudio" autoplay loop>
+    <audio id="myAudio" muted autoplay loop>
         <source src="HOTLANDS.mp3" type="audio/mpeg">
     </audio>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var audio = document.getElementById('myAudio');
+            audio.muted = false; 
             audio.play();
         });
     </script>
