@@ -3,18 +3,27 @@
 
 <head>
     <style>
-      .custom-marquee {
-        font-size: 40px; 
-      }
+        .custom-marquee {
+            font-size: 40px;
+        }
     </style>
-    </head>
-    <body>
+</head>
+
+<body>
     <marquee class="custom-marquee" behavior="scroll" direction="left">
-     THIS PAGE IS A WORK IN PROGRESS :3
+        THIS PAGE IS A WORK IN PROGRESS :3
     </marquee>
-    
-    </body>
 
+    <audio id="myAudio" autoplay loop>
+        <source src="HOTLANDS.mp3" type="audio/mpeg">
+    </audio>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        });
+    </script>
+</body>
 
 </html>
