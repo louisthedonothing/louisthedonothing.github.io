@@ -1,0 +1,108 @@
+/* General Page Setup */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', monospace;  /* Monospaced font for terminal look */
+    background-color: black;  /* Terminal background color */
+    color: #00ff00;  /* Green text color */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+/* Container for all boxes */
+.container {
+    width: 100%;  /* Make it take up the entire width */
+    height: 100%;  /* Make it take up the entire height */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    border: 2px solid #00ff00;  /* Green border for that retro look */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* Style for all boxes */
+.box {
+    border-bottom: 1px solid #00ff00;  /* Green border separating each box */
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 1.2em;
+    word-wrap: break-word;  /* Ensures that long words do not overflow */
+}
+
+/* Styling for the envelope (title) */
+.envelope {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff6600;  /* Amber text color */
+}
+
+/* Styling for links, to look like clickable terminal text */
+.links a {
+    color: #00ff00;  /* Green text */
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+    font-size: 1.1em;
+}
+
+.links a:hover {
+    color: #ff6600;  /* Amber hover effect */
+}
+
+/* Image styling (scaled down and aligned) */
+.image1, .image2, .profile {
+    width: 80%;  /* Set image width to 80% of the container */
+    max-width: 500px;  /* Cap the maximum width to prevent stretching */
+    margin: 10px auto;  /* Center-align the images */
+    border: 2px solid #00ff00;
+    padding: 10px;
+    background-color: black;
+}
+
+/* Ensure images are responsive and fit well */
+.image1 img, .image2 img, .profile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  /* Ensures aspect ratio is maintained */
+}
+
+/* Gif Container, scaling down the image */
+.gif-container {
+    display: flex;
+    justify-content: center; /* Center the gif horizontally */
+    align-items: center;     /* Align the gif vertically if necessary */
+    width: 100%;             /* Full width */
+    padding: 20px 0;         /* Add some padding around */
+}
+
+.gif-container img {
+    width: 80%;
+    max-width: 400px;  /* Cap the maximum width for the gif */
+    height: auto;
+    border-top: 2px solid #00ff00;
+    padding-top: 10px;
+}
+
+/* Adding a subtle "flashing cursor" effect for terminal feel */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #00ff00;
+    animation: blink 0.8s step-end infinite;
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
